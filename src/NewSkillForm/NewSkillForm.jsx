@@ -1,7 +1,8 @@
+import "./NewSkillForm.css";
 export default function NewSkillForm() {
     //App logic return UI as JSX
     return (
-        <form>
+        <form className={"NewSkillForm"}>
             <label for="skillName">Skill</label>
             <input type="text" id="skillName" className="skillName" />
             <label for="skillLevel">Level</label>
