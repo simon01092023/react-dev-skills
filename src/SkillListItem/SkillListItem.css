@@ -1,7 +1,7 @@
 .SkillListItem {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     margin: 0.5rem;
     padding: 0.2rem 0.6rem;
     border: 0.2rem solid coral;
@@ -26,4 +26,8 @@
     display: flex;
     justify-content: right;
     align-items: right;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: teal;
 }
