@@ -24,31 +24,30 @@ export default function NewSkillForm(props) {
     return (
         <>
             <form className="NewSkillForm" onSubmit={handleAddSkill}>
-                <label>Skill
-                    <input
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        id="skillName"
-                        className="skillName"
-                        required // required the below pattern prop
-                        pattern=".{1,}"
-                    />
-                </label>
-                <label>Level
-                    <select
-                        id="skillLevel"
-                        name="level"
-                        value={formData.level}
-                        onChange={handleChange}
-                        className="skillLevel">
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                    </select>
-                </label>
+
+                <label>Skill</label>
+                <input
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    id="skillName"
+                    className="skillName"
+                    required // required the below pattern prop
+                    pattern=".{1,}"
+                />
+                <label>Level</label>
+                <select
+                    id="skillLevel"
+                    name="level"
+                    value={formData.level}
+                    onChange={handleChange}
+                    className="skillLevel">
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
+                    <option value={4}>4</option>
+                    <option value={5}>5</option>
+                </select>
                 <button type="submit">ADD SKILL</button>
             </form>
         </>

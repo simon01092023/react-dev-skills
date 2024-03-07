@@ -8,10 +8,10 @@ import NewSkillForm from './NewSkillForm/NewSkillForm';
 
 export default function App() {
   //const showSkills =  useState(skills);
-  const [skills, setSkills] = useState([{ name: "HTML", level: 5 },
-  { name: "CSS", level: 3 },
-  { name: "JavaScript", level: 4 },
-  { name: "Python", level: 2 },]);
+  const [skills, setSkills] = useState([{ name: "HTML", LEVEL: 5 },
+  { name: "CSS", lEVEL: 3 },
+  { name: "JavaScript", LEVEL: 4 },
+  { name: "Python", LEVEL: 2 },]);
 
   //const [] = useState(); boilder plate
   const [showSkills, setShowSkills] = useState(true);
@@ -19,20 +19,21 @@ export default function App() {
   function addSkill(skill) {
     //replace state
     setSkills([...skills, skill]);
-   
+
   }
 
   return (
-    <div className='App'>
-      {/* <h1> */}
-      <h1>React Dev Skills</h1>
-      {/* <SkillList>  constionally render/set by useState*/}
-      {showSkills && <SkillList skills={skills} />}
-      {/* <hr> */}
-      <hr />
-      {/* <NewSkillForm> */}
-      <NewSkillForm addSkill={addSkill} />
-    </div>
-
+    <>
+      <div className='App'>
+        {/* <h1> */}
+        <h1 className='teal-text'>React Dev Skills</h1>
+        {/* <SkillList>  constionally render/set by useState*/}
+        {showSkills && <SkillList skills={skills} />}
+        {/* <hr> */}
+        <hr />
+        {/* <NewSkillForm> */}
+        <NewSkillForm addSkill={addSkill} />
+      </div>
+    </>
   );
 }
